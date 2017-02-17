@@ -1,0 +1,19 @@
+{
+  "name": "access_control_frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mortaldraw/MarktDashboard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mortaldraw/MarktDashboard/issues"
+  },
+  "homepage": "https://github.com/mortaldraw/MarktDashboard#readme"
+}
