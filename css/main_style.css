@@ -17,3 +17,8 @@
     padding-top: 0.3em !important;
     padding-bottom: 0.3em !important;
 }
+
+div.fixed-max-height{
+    max-height: 22em;
+    overflow-y: scroll;
+}
