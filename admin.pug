@@ -1,0 +1,68 @@
+extends pug_content/templates/main_template
+
+prepend title
+    | Control de accesos
+
+block content
+    h2 Control de accesos
+    hr
+    table.table.table-bordered
+        thead
+            tr
+                th Acceso
+                th Mail
+                th Nombre
+                th Dar / Quitar acceso
+                th Eliminar
+        tbody
+            tr
+                td.text-center
+                    button.btn.btn-circle.btn-success.btn-lg.btn-no-hover
+                        icon.glyphicon.glyphicon-ok
+                td gpinzon@plannet.mx
+                td Gerardo Pinz&oacute;n
+                td
+                    row.text-center
+                        .col-xs-6
+                            button.btn.btn-circle.btn-success.disabled.btn-lg
+                                icon.glyphicon.glyphicon-ok
+                        .col-xs-6
+                            button.btn.btn-circle.btn-danger.btn-lg
+                                icon.glyphicon.glyphicon-remove
+                td.text-center
+                    button.btn.btn-circle.btn-danger.btn-lg
+                        icon.glyphicon.glyphicon-trash
+            tr
+                td.text-center
+                    button.btn.btn-circle.btn-success.btn-lg.btn-no-hover
+                        icon.glyphicon.glyphicon-ok
+                td maggsvisan@gmail.com
+                td Margarita Villarreal
+                td
+                    row.text-center
+                        .col-xs-6
+                            button.btn.btn-circle.btn-success.disabled.btn-lg
+                                icon.glyphicon.glyphicon-ok
+                        .col-xs-6
+                            button.btn.btn-circle.btn-danger.btn-lg
+                                icon.glyphicon.glyphicon-remove
+                td.text-center
+                    button.btn.btn-circle.btn-danger.btn-lg
+                        icon.glyphicon.glyphicon-trash
+            tr
+                td.text-center
+                    button.btn.btn-circle.btn-danger.btn-lg.btn-no-hover
+                        icon.glyphicon.glyphicon-remove
+                td mailfalso@spam.com
+                td Lorem Ipsum
+                td
+                    row.text-center
+                        .col-xs-6
+                            button.btn.btn-circle.btn-success.btn-lg
+                                icon.glyphicon.glyphicon-ok
+                        .col-xs-6
+                            button.btn.btn-circle.btn-danger.btn-lg.disabled
+                                icon.glyphicon.glyphicon-remove
+                td.text-center
+                    button.btn.btn-circle.btn-danger.btn-lg
+                        icon.glyphicon.glyphicon-trash
