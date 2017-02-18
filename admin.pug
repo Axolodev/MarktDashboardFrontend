@@ -17,11 +17,11 @@ block content
         tbody
             tr
                 td.text-center
-                    button.btn.btn-circle.btn-success.btn-lg.btn-no-hover
+                    button.btn.btn-circle.btn-success.btn-lg.btn-no-hover.has_access
                         icon.glyphicon.glyphicon-ok
                 td gpinzon@plannet.mx
                 td Gerardo Pinz&oacute;n
-                td
+                td.access_buttons
                     row.text-center
                         .col-xs-6
                             button.btn.btn-circle.btn-success.disabled.btn-lg
@@ -30,15 +30,15 @@ block content
                             button.btn.btn-circle.btn-danger.btn-lg
                                 icon.glyphicon.glyphicon-remove
                 td.text-center
-                    button.btn.btn-circle.btn-danger.btn-lg
+                    button.btn.btn-circle.btn-danger.btn-lg.btn-remove
                         icon.glyphicon.glyphicon-trash
             tr
                 td.text-center
-                    button.btn.btn-circle.btn-success.btn-lg.btn-no-hover
+                    button.btn.btn-circle.btn-success.btn-lg.btn-no-hover.has_access
                         icon.glyphicon.glyphicon-ok
                 td maggsvisan@gmail.com
                 td Margarita Villarreal
-                td
+                td.access_buttons
                     row.text-center
                         .col-xs-6
                             button.btn.btn-circle.btn-success.disabled.btn-lg
@@ -47,15 +47,15 @@ block content
                             button.btn.btn-circle.btn-danger.btn-lg
                                 icon.glyphicon.glyphicon-remove
                 td.text-center
-                    button.btn.btn-circle.btn-danger.btn-lg
+                    button.btn.btn-circle.btn-danger.btn-lg.btn-remove
                         icon.glyphicon.glyphicon-trash
             tr
                 td.text-center
-                    button.btn.btn-circle.btn-danger.btn-lg.btn-no-hover
+                    button.btn.btn-circle.btn-danger.btn-lg.btn-no-hover.has_access
                         icon.glyphicon.glyphicon-remove
                 td mailfalso@spam.com
                 td Lorem Ipsum
-                td
+                td.access_buttons
                     row.text-center
                         .col-xs-6
                             button.btn.btn-circle.btn-success.btn-lg
@@ -64,5 +64,8 @@ block content
                             button.btn.btn-circle.btn-danger.btn-lg.disabled
                                 icon.glyphicon.glyphicon-remove
                 td.text-center
-                    button.btn.btn-circle.btn-danger.btn-lg
+                    button.btn.btn-circle.btn-danger.btn-lg.btn-remove
                         icon.glyphicon.glyphicon-trash
+
+append scripts
+    script(src="js/admin.js")
