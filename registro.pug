@@ -1,3 +1,46 @@
 extends pug_content/templates/main_template
 
+prepend title
+    | Registro
+
+append stylesheets
+    script(src="css/datepicker.css")
+
 block content
+    h1 Registro
+    form
+        .row
+            .col-xs-12.col-sm-6
+                fieldset
+                    legend Información de acceso
+                    .form-group
+                        label(for="email") Email
+                        input(type="email", required=true).form-control#email
+                    .form-group
+                        label(for="password") Contraseña
+                        input(type="password", required=true).form-control#password
+            .col-xs-12.col-sm-6
+                fieldset
+                    legend Información personal
+                    .form-group
+                        label(for="first_name") Nombre(s)
+                        input(type="text", required=true).form-control#first_name
+                    .form-group
+                        label(for="last_name") Apellido(s)
+                        input(type="text", required=true).form-control#last_name
+                    .row
+                        .col-xs-3
+                            .form-group
+                                label(for="birthday") Cumpleaños
+                                input(type="text", required=false).form-control#birthday
+                        .col-xs-9
+                            .form-group
+                                label(for="company") Empresa
+                                input(type="text", required=true).form-control#company
+
+        button.btn.btn-default.pull-right Submit
+
+append scripts
+    script(src="js/bootstrap-datepicker.js")
+    script
+        | $(document).ready(function(){$("#birthday").datepicker();});

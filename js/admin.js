@@ -8,6 +8,8 @@ $(document).ready(function(){
             .toggleClass("glyphicon-ok");
     });
     $(".btn-remove").click(function(){
-        $(this).parents("tr").remove();
+        if(confirm("¿Quieres borrar este registro?")) {
+            $(this).parents("tr").remove();
+        }
     });
 });

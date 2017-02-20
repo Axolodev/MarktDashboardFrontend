@@ -2,7 +2,7 @@ body{
     font-family: 'Roboto', sans-serif;
 
 }
-h1, h2, h3, h4, h5{
+h1, h2, h3, h4, h5, legend, .navbar-brand{
     font-family: 'PT Serif', serif;
 }
 .navbar{
@@ -45,9 +45,9 @@ div.fixed-max-height{
 }
 
 .btn:not(.disabled):not(.btn-no-hover):active{
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
     margin-top: 1px;
     margin-bottom: 0;
 }
