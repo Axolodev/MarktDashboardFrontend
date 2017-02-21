@@ -1,0 +1,68 @@
+/*
+
+	INSTRUCTIONS ---------------------------------------------------------------------------------
+  
+  1. link this stylesheet in the head of your HTML
+  	 <link href="YOUR PATH/birthday_picker_style.css" rel="stylesheet" type="text/css" />
+     
+  2. Set the file name as data-theme attribute on your input
+  	 <input data-theme="birthday_picker_style" />
+     
+  3. That's it!
+  
+  When you run script the style will be automatically applied.
+
+*/
+div.datedropper.birthday_picker_style {
+  border-radius: 8px;
+  width: 175px;
+}
+div.datedropper.birthday_picker_style .picker {
+  border-radius: 8px;
+  box-shadow: 0 0 31px 1px rgba(0, 0, 0, 0.39);
+}
+div.datedropper.birthday_picker_style .pick-l {
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+div.datedropper.birthday_picker_style:before,
+div.datedropper.birthday_picker_style .pick-submit,
+div.datedropper.birthday_picker_style .pick-lg-b .pick-sl:before,
+div.datedropper.birthday_picker_style .pick-m,
+div.datedropper.birthday_picker_style .pick-lg-h {
+  background-color: #3b1663;
+}
+div.datedropper.birthday_picker_style .pick-y.pick-jump,
+div.datedropper.birthday_picker_style .pick li span,
+div.datedropper.birthday_picker_style .pick-lg-b .pick-wke,
+div.datedropper.birthday_picker_style .pick-btn {
+  color: #3b1663;
+}
+div.datedropper.birthday_picker_style .picker,
+div.datedropper.birthday_picker_style .pick-l {
+  background-color: #FFF;
+}
+div.datedropper.birthday_picker_style .picker,
+div.datedropper.birthday_picker_style .pick-arw,
+div.datedropper.birthday_picker_style .pick-l {
+  color: #2d2d2d;
+}
+div.datedropper.birthday_picker_style .pick-m,
+div.datedropper.birthday_picker_style .pick-m .pick-arw,
+div.datedropper.birthday_picker_style .pick-lg-h,
+div.datedropper.birthday_picker_style .pick-lg-b .pick-sl,
+div.datedropper.birthday_picker_style .pick-submit {
+  color: #FFF;
+}
+div.datedropper.birthday_picker_style.picker-tiny:before,
+div.datedropper.birthday_picker_style.picker-tiny .pick-m {
+  background-color: #FFF;
+}
+div.datedropper.birthday_picker_style.picker-tiny .pick-m,
+div.datedropper.birthday_picker_style.picker-tiny .pick-m .pick-arw {
+  color: #2d2d2d;
+}
+div.datedropper.birthday_picker_style.picker-lkd .pick-submit {
+  background-color: #FFF;
+  color: #2d2d2d;
+}

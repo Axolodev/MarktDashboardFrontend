@@ -15,5 +15,14 @@
   "bugs": {
     "url": "https://github.com/mortaldraw/MarktDashboard/issues"
   },
-  "homepage": "https://github.com/mortaldraw/MarktDashboard#readme"
+  "homepage": "https://github.com/mortaldraw/MarktDashboard#readme",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-env": "^1.1.8",
+    "babelify": "^7.3.0"
+  }
 }

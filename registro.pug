@@ -4,10 +4,12 @@ prepend title
     | Registro
 
 append stylesheets
-    script(src="css/datepicker.css")
+    link(rel='stylesheet', type="text/css", href='css/datedropper.min.css')
+    link(rel='stylesheet', type="text/css", href='css/birthday_picker_style.css')
 
 block content
     h1 Registro
+    - var tooltip_text = "Este campo es requerido";
     form
         .row
             .col-xs-12.col-sm-6
@@ -15,32 +17,39 @@ block content
                     legend Información de acceso
                     .form-group
                         label(for="email") Email
+                            span.glyphicon.glyphicon-asterisk.text-danger(data-toggle="tooltip", title=tooltip_text)
                         input(type="email", required=true).form-control#email
                     .form-group
                         label(for="password") Contraseña
+                            span.glyphicon.glyphicon-asterisk.text-danger(data-toggle="tooltip", title=tooltip_text)
                         input(type="password", required=true).form-control#password
             .col-xs-12.col-sm-6
                 fieldset
                     legend Información personal
                     .form-group
                         label(for="first_name") Nombre(s)
+                            span.glyphicon.glyphicon-asterisk.text-danger(data-toggle="tooltip", title=tooltip_text)
                         input(type="text", required=true).form-control#first_name
                     .form-group
                         label(for="last_name") Apellido(s)
+                            span.glyphicon.glyphicon-asterisk.text-danger(data-toggle="tooltip", title=tooltip_text)
                         input(type="text", required=true).form-control#last_name
                     .row
-                        .col-xs-3
+                        .col-xs-4.col-sm-12.col-md-4
                             .form-group
-                                label(for="birthday") Cumpleaños
-                                input(type="text", required=false).form-control#birthday
-                        .col-xs-9
+                                label(for="birthday") Fecha de nacimiento
+                                input(type="text", data-min-year="1930" required=false, data-large-mode="true", data-lang="es", data-format="d-m-Y", data-theme="birthday_picker_style").form-control#birthday
+                        .col-xs-8.col-sm-12.col-md-8
                             .form-group
                                 label(for="company") Empresa
-                                input(type="text", required=true).form-control#company
+                                input(type="text").form-control#company
 
         button.btn.btn-default.pull-right Submit
 
 append scripts
-    script(src="js/bootstrap-datepicker.js")
-    script
-        | $(document).ready(function(){$("#birthday").datepicker();});
+    script(src="js/datedropper.min.js")
+    script(type='text/javascript').
+        $(document).ready(function () {
+            $("#birthday").dateDropper();
+            $('[data-toggle="tooltip"]').tooltip();
+        });
