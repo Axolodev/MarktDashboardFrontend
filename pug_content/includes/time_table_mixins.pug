@@ -1,0 +1,44 @@
+mixin time_block_big_screen
+    - var x = 0;
+    while x < 24
+        tr
+            - x++;
+            if x < 5
+                td= '0' + (Math.round(x / 2) + 7) + ':' + ((x % 2 == 1) ? '00' : '30')
+            else
+                td= (Math.round(x / 2) + 7) + ':' + ((x % 2 == 1) ? '00' : '30')
+            td 1
+            td 2
+            td 3
+            td 4
+            td 5
+            td 6
+            td 7
+
+mixin xs_day_tab(name, index)
+    - var active_day = 0;
+    if(index == active_day)
+        li.active
+            a(href=("#" + name.toLowerCase()), data-toggle='tab')
+                | #{name}
+    else
+        li
+            a(href=("#" + name.toLowerCase()), data-toggle='tab')
+                | #{name}
+
+mixin time_block_small_screen(index)
+    table.table.mobile-timetable
+        thead
+            tr
+                th Hora
+                th Personas
+        tbody
+            - var x = 0;
+            while x < 24
+                tr
+                    - x++;
+                    if x < 5
+                        td= '0' + (Math.round(x / 2) + 7) + ':' + ((x % 2 == 1) ? '00' : '30')
+                    else
+                        td= (Math.round(x / 2) + 7) + ':' + ((x % 2 == 1) ? '00' : '30')
+                    td Persona

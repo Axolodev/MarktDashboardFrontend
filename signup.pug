@@ -37,12 +37,34 @@ block content
                     .row
                         .col-xs-4.col-sm-12.col-md-4
                             .form-group
+                                label(for="gender") Genero
+                                select.form-control#gender
+                                    option &nbsp;
+                                    option Masculino
+                                    option Femenino
+                        .col-xs-7.col-sm-12.col-md-8
+                            .form-group
+                                label(for="title") Titulo
+                                select.form-control#title
+                                    option &nbsp;
+                                    option Sr.
+                                    option Sra.
+                                    option Srita.
+                                    option Ing.
+                                    option Lic.
+                                    option Dr.
+
+                    .row
+                        .col-xs-4.col-sm-12.col-md-4
+                            .form-group
                                 label(for="birthday") Fecha de nacimiento
                                 input(type="text", data-min-year="1930" required=false, data-large-mode="true", data-lang="es", data-format="d-m-Y", data-theme="birthday_picker_style").form-control#birthday
                         .col-xs-8.col-sm-12.col-md-8
                             .form-group
                                 label(for="company") Empresa
                                 input(type="text").form-control#company
+
+
 
         button.btn.btn-default.pull-right Submit
 

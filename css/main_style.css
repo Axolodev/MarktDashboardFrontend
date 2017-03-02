@@ -1,14 +1,17 @@
-body{
+body {
     font-family: 'Roboto', sans-serif;
 
 }
-h1, h2, h3, h4, h5, legend, .navbar-brand{
+
+h1, h2, h3, h4, h5, legend, .navbar-brand {
     font-family: 'PT Serif', serif;
 }
-.navbar{
+
+.navbar {
     border-radius: 0;
-    padding-right:2em;
+    padding-right: 2em;
 }
+
 .colorgraph {
     height: 5px;
     border-top: 0;
@@ -20,10 +23,11 @@ h1, h2, h3, h4, h5, legend, .navbar-brand{
     background-image: linear-gradient(to right, #c4e17f, #c4e17f 12.5%, #f7fdca 12.5%, #f7fdca 25%, #fecf71 25%, #fecf71 37.5%, #f0776c 37.5%, #f0776c 50%, #db9dbe 50%, #db9dbe 62.5%, #c49cde 62.5%, #c49cde 75%, #669ae1 75%, #669ae1 87.5%, #62c2e4 87.5%, #62c2e4);
 }
 
-div.fixed-max-height{
-    max-height: 22em;
+.fixed-max-height {
+    max-height: 21em !important;
     overflow-y: scroll;
 }
+
 .btn-circle {
     width: 30px;
     height: 30px;
@@ -33,21 +37,177 @@ div.fixed-max-height{
     line-height: 1.428571429;
     border-radius: 50%;
 }
-.btn-no-hover{
+
+.btn-no-hover {
     pointer-events: none;
 }
-.btn:not(.disabled):not(.btn-no-hover){
-    -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
-    -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
-    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.4);
+
+.btn:not(.disabled):not(.btn-no-hover) {
+    -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.4);
     margin-bottom: 1px;
     margin-top: 0;
 }
 
-.btn:not(.disabled):not(.btn-no-hover):active{
-    -webkit-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
-    -moz-box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+.btn:not(.disabled):not(.btn-no-hover):active {
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
     margin-top: 1px;
     margin-bottom: 0;
 }
+
+.profile-information p {
+    margin-bottom: 0;
+}
+
+.profile-information hr {
+    margin: 12px 0;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.bordered {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1em;
+}
+
+.bottom_bordered {
+    border-bottom: 1px solid #eee;
+    border-radius: 5px;
+}
+
+.header-fixed {
+    position: fixed;
+    top: 0;
+    display: none;
+    background-color: white;
+}
+
+/**
+* Schedule styles
+*/
+
+.schedule-checkbox {
+    -moz-appearance: none;
+    -ms-progress-appearance: initial;
+    -webkit-appearance: none;
+    border-right: 1px solid #eee;
+    border-left: 1px solid #eee;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+}
+
+input[type="checkbox"].schedule-checkbox {
+    margin: 0;
+}
+
+.schedule-checkbox:checked {
+    background-color: rgba(92, 184, 92, 1);
+}
+
+.schedule-checkbox:hover, .schedule-checkbox:checked:hover {
+    background-color: rgba(92, 184, 92, 0.45)
+}
+
+.schedule-checkbox:after {
+    content: '\2714';
+    color: rgba(0, 0, 0, 0);
+    padding: 0 3em;
+    min-width: 6em;
+    min-height: 2em;
+    width: 6em;
+    height: 2em;
+    font-size: 14px;
+}
+
+.schedule-checkbox:checked:after {
+    content: '\2714';
+    min-width: 6em;
+    height: 2em;
+    padding: 0 3em;
+    color: #e6f7ff;
+}
+
+.schedule-table td {
+    padding: 0 8px !important;
+    text-align: center;
+    line-height: 1 !important;
+    vertical-align: bottom !important;
+}
+
+.schedule-table > thead > tr > th {
+    text-align: center;
+}
+
+.schedule-table > tbody > tr > td {
+    border-bottom: 1px solid #eee;
+}
+
+@media only screen and (max-width: 992px) and (min-width: 768px) {
+    /* For small screens, bigger than mobiles: */
+    .schedule-checkbox:after {
+        content: '\2714';
+        color: rgba(0, 0, 0, 0);
+        font-size: 14px;
+    }
+
+    .schedule-checkbox:checked:after {
+        content: '\2714';
+        min-width: 3em;
+        color: #e6f7ff;
+    }
+
+    .schedule-table td {
+        padding: 0 2px !important;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* For small screens, bigger than mobiles: */
+    .schedule-table > tbody > tr > td > input,
+    .schedule-table > tbody > tr > td > p{
+        padding: 0.5em !important;
+        margin: 0
+    }
+}
+
+.tabs-left > li {
+    overflow-x: hidden;
+}
+.tabs-left > li > a{
+    padding-left: 10px;
+}
+
+
+
+
+@media only screen and (max-width: 500px) {
+    table.admin_access_control > tbody > tr > td:nth-child(3),
+    table.admin_access_control > thead > tr > th:nth-child(3){
+        visibility: hidden;
+        display:none;
+    }
+
+    table.admin_access_control > tbody > tr > td:nth-child(2){
+        max-width: 70px;
+        overflow-x: scroll;
+    }
+    table.admin_access_control > tbody > tr > td.access_buttons .col-xs-6{
+        padding-left: 0;
+    }
+}
+
+@media only screen and (min-width: 320px) {
+    .screen_too_small{
+        display: none;
+    }
+}
+
+

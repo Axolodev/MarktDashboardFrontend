@@ -1,0 +1,121 @@
+extends pug_content/templates/main_template
+include pug_content/includes/time_table_mixins
+
+prepend title
+    | Perfil
+
+append stylesheets
+    link(rel='stylesheet', type='text/css', href='css/bootstrap.vertical-tabs.css')
+
+
+block content
+    .row
+        .col-xs-12
+            h2 Perfil
+            hr
+            .row
+                .col-xs-12.col-sm-3
+                    h3 Imagen de perfil
+                    hr
+                    a(href="#")
+                        img(src="assets/no-profile-image.png").img-responsive
+                    br
+                    input(type="file").form-control
+
+                    hr
+                .col-xs-12.col-sm-8.col-sm-offset-1
+                    ul.nav.nav-tabs
+                        li.active
+                            a(data-toggle="tab", href="#profile_data")
+                                h4 Datos
+                        li
+                            a(data-toggle="tab", href="#schedule")
+                                h4 Horario
+                    .tab-content
+                        .profile-information#profile_data.tab-pane.fade.in.active
+                            br
+                            hr
+                            .row
+                                .col-xs-4
+                                    b Nombre completo
+                                .col-xs-8
+                                    p Kevin Brian Kwan Chong Loo
+                            hr
+                            .row
+                                .col-xs-4
+                                    b Titulo
+                                .col-xs-8
+                                    p Ing.
+                            hr
+                            .row
+                                .col-xs-4
+                                    b Correo Electrónico
+                                .col-xs-8
+                                    p kranok@gmail.com
+                            hr
+                            .row
+                                .col-xs-4
+                                    b Fecha de nacimiento
+                                .col-xs-8
+                                    p 26 de Noviembre de 1994
+                            hr
+                            .row
+                                .col-xs-4
+                                    b Empresa
+                                .col-xs-8
+                                    p Markt Labs
+                            hr
+                            .row
+                                .col-xs-4
+                                    b Genero
+                                .col-xs-8
+                                    p Masculino
+                            hr
+                            a(href="profile_edit.html").btn-lg.btn.btn-info.pull-right Editar
+
+                        #schedule.tab-pane.fade
+                            .row
+                                .col-xs-12
+                                    .hidden-xs.visible-sm
+                                        br
+                                        .fixed-max-height.bottom_bordered
+                                            table.table.timetable.table-condensed.table-striped.bordered
+                                                thead
+                                                    tr
+                                                        th Hora
+                                                        th Lunes
+                                                        th Martes
+                                                        th Miércoles
+                                                        th Jueves
+                                                        th Viernes
+                                                        th Sábado
+                                                        th Domingo
+                                                tbody
+                                                    +time_block_big_screen()
+                                    .visible-xs.hidden-sm.hidden-md.hidden-lg
+                                        .row
+                                            .col-xs-12
+                                                - var days = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"];
+                                                .row
+                                                    .col-xs-3
+                                                        ul.nav.nav-tabs.tabs-left
+                                                            each name, index in days
+                                                                +xs_day_tab(name, index)
+                                                    .col-xs-9
+                                                        // Tab panes
+                                                        .tab-content.fixed-max-height
+                                                            each name, index in days
+                                                                if (index == 0)
+                                                                    div.tab-pane.active(id=name.toLowerCase())
+                                                                        h2=name
+                                                                        +time_block_small_screen(index)
+                                                                else
+                                                                    div.tab-pane(id=name.toLowerCase())
+                                                                        h2=name
+                                                                        +time_block_small_screen(index)
+                                                    .clearfix
+
+
+                                    br
+                                    a(href="schedule_edit.html").btn-lg.btn.btn-info.pull-right Editar
+            br
